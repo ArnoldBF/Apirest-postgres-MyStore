@@ -11,7 +11,9 @@ class CategoryService {
   }
 
   async find() {
-    const categories = await models.Category.findAll();
+    const categories = await models.Category.findAll({
+      include: ['products'],
+    });
     if (!categories) {
       throw boom.notFound('categories not found');
     }
