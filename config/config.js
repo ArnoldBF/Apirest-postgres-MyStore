@@ -8,6 +8,9 @@ const config = {
   dbHost: process.env.DB_HOST || 'localhost',
   dbPort: process.env.DB_PORT || 5432,
   dbName: process.env.DB_NAME || 'db_mystore',
+  apiKey: process.env.API_KEY,
+  jwtSecret: process.env.JWT_SECRET,
+  jwtSecretRecovery: process.env.JWT_SECRET_RECOVERY,
 };
 
 module.exports = config;

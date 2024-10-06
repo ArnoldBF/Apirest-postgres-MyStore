@@ -31,8 +31,9 @@ const OrderSchema = {
   total: {
     type: DataTypes.VIRTUAL,
     get() {
-      if (this.items.length > 0) {
-        return this.items.reduce((total, item) => {
+      const items = this.items || [];
+      if (items.length > 0) {
+        return items.reduce((total, item) => {
           return total + parseFloat(item.price) * item.OrderProduct.amount;
         }, 0);
       }
