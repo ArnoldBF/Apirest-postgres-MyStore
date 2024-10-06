@@ -41,8 +41,8 @@ class AuthService {
       port: 587,
       secure: false, // true for port 465, false for other ports
       auth: {
-        user: 'a.bazan@conecta.com.bo',
-        pass: 'Ia260523***',
+        user: config.userMail,
+        pass: config.userPass,
       },
     });
 

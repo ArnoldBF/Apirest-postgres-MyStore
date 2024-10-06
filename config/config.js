@@ -11,6 +11,8 @@ const config = {
   apiKey: process.env.API_KEY,
   jwtSecret: process.env.JWT_SECRET,
   jwtSecretRecovery: process.env.JWT_SECRET_RECOVERY,
+  userMail: process.env.USER_MAIL,
+  userPass: process.env.USER_PASS,
 };
 
 module.exports = config;
